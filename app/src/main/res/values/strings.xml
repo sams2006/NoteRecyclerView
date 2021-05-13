@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NoteRecyclerView</string>
+    <string name="note1">note1</string>
+    <string name="note2">note2</string>
 </resources>
