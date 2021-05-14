@@ -8,11 +8,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+   private var  notesList = ArrayList<Note>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val notesList = ArrayList<Note>()
+        buildArrayList()
+        buildRecyclerView()
+        
+
+    }
+
+    private fun buildArrayList(){
+
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2" , 6))
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2", 7))
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2", 3))
@@ -25,14 +33,12 @@ class MainActivity : AppCompatActivity() {
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2", 9))
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2", 2))
         notesList.add(Note(R.drawable.ic_time , "note1" , "note2" , 4))
+    }
 
-       notes_recycler_view.adapter = NoteAdapter(notesList)
+    private fun buildRecyclerView(){
+        notes_recycler_view.adapter = NoteAdapter(notesList)
         notes_recycler_view.layoutManager = LinearLayoutManager(this)
         notes_recycler_view.setHasFixedSize(true)
-
-
-
-
     }
 
 }
