@@ -39,4 +39,15 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/priority_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="6"
+        android:layout_gravity="end"
+        android:layout_margin="6dp"
+        android:textStyle="bold"/>
+
+
 </androidx.cardview.widget.CardView>
